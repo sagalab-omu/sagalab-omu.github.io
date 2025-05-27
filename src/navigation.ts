@@ -10,7 +10,7 @@ export const headerData = {
       text: 'メンバー紹介',
       href: getPermalink('/members'),
     },
-    {text:'ニュース',href:getPermalink('news','category')},
+    {text:'ニュース',href:getBlogPermalink()},
     {
       text: '留学生向け',
       href: getPermalink('/for-international-students'),
