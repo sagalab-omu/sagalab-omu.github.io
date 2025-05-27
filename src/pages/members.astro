@@ -1,0 +1,69 @@
+---
+
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import MembersWidget from '~/components/widgets/Members.astro';
+
+// Load all data sources at build time
+const labData = await import('../data/lab.json').catch(() => ({
+  default: {
+    name: 'Our Laboratory',
+    tagline: 'Advancing knowledge through innovative research',
+    description: 'We are dedicated to pushing the boundaries of scientific discovery through cutting-edge research and collaboration.',
+    banner: '/images/lab/banner.jpg',
+    email: 'info@example.com',
+    location: 'Osaka, Japan'
+  }
+}));
+
+const memberFiles = import.meta.glob('../data/members/*.json', { eager: true });
+
+const lab = labData.default;
+
+interface Member {
+  name: string;
+  role: string;
+  bio: string;
+  photo: string;
+  github: string;
+  "research-area": string;
+}
+
+const members: Member[] = Object.values(memberFiles).map((file: { default: Member }) => file.default);
+
+console.log('Members loaded:', members);
+
+const metadata = {
+  title: `${lab.name} - ${lab.tagline}`,
+  description: lab.description,
+  canonical: '/members',
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero
+    actions={[
+
+    ]}
+    image={{ src: '~/assets/images/lab-member.png', alt: 'sagalab hero image' }}
+  >
+    <Fragment slot="title">
+      佐賀研究室は挑戦し続けます
+    </Fragment>
+
+    <Fragment slot="subtitle">
+
+    </Fragment>
+  </Hero>
+  
+  <MembersWidget
+    title="チームメンバー"
+    subtitle="私たちの研究室は、様々な専門分野を持つメンバーで構成されています。"
+    members={members}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-gray-950"></div>
+    </Fragment>
+  </MembersWidget>
+  
+</Layout>

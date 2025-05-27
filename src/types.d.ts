@@ -279,3 +279,16 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+export interface Members extends Omit<Headline, 'classes'>, Widget {
+  members?: Array<Member>;
+}
+
+export interface Member {
+  name: string;
+  role: string;
+  bio: string;
+  photo?: string;
+  github?: string;
+  'research-area'?: string;
+}

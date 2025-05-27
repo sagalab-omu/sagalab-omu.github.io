@@ -1,0 +1,52 @@
+---
+import type { Members as Props } from '~/types';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import MemberCard from '~/components/ui/MemberCard.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  members = [],
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-7xl mx-auto py-16 md:py-24 ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    tagline={tagline}
+    classes={{
+      container: 'max-w-xl sm:mx-auto lg:max-w-2xl text-center mb-16',
+      title: `text-3xl md:text-4xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900 dark:text-white'}`,
+      subtitle: `max-w-3xl mx-auto text-xl ${isDark ? 'text-slate-400' : 'text-muted dark:text-slate-400'}`,
+    }}
+  />
+
+  {members.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {members.map((member) => (
+        <MemberCard
+          name={member.name}
+          role={member.role}
+          bio={member.bio}
+          photo={member.photo}
+          github={member.github}
+          researchArea={member['research-area']}
+          isDark={isDark}
+        />
+      ))}
+    </div>
+  )}
+</WidgetWrapper>

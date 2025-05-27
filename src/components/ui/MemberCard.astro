@@ -1,0 +1,108 @@
+---
+export interface Props {
+  name: string;
+  role: string;
+  bio: string;
+  photo?: string;
+  github?: string;
+  researchArea?: string;
+  isDark?: boolean;
+}
+
+const { name, role, bio, photo, github, researchArea, isDark = false } = Astro.props;
+---
+
+<div class:list={[
+  'rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center h-full flex flex-col border',
+  {
+    'bg-white border-gray-200': !isDark,
+    'dark:bg-slate-900 dark:border-slate-700 dark:shadow-black/60': !isDark,
+    'bg-slate-900 border-slate-700 shadow-black/60': isDark,
+  }
+]}>
+  <div class="mb-6">
+    <img
+      src={photo || "/images/members/default.svg"}
+      alt={`${name} ${photo ? 'photo' : 'avatar'}`}
+      class:list={[
+        'w-24 h-24 rounded-full mx-auto object-cover mt-4 border-2',
+        {
+          'border-gray-200': !isDark,
+          'dark:border-slate-500': !isDark,
+          'border-slate-500': isDark,
+        }
+      ]}
+      width="96"
+      height="96"
+    />
+  </div>
+  
+  <h3 class:list={[
+    'text-xl font-semibold mb-2',
+    {
+      'text-gray-900': !isDark,
+      'dark:text-slate-50': !isDark,
+      'text-slate-50': isDark,
+    }
+  ]}>
+    {name}
+  </h3>
+  
+  <p class:list={[
+    'font-medium mb-4',
+    {
+      'text-blue-600': !isDark,
+      'dark:text-blue-300': !isDark,
+      'text-blue-300': isDark,
+    }
+  ]}>
+    {role}
+  </p>
+  
+  {researchArea && (
+    <p class:list={[
+      'text-sm mb-4 px-3 py-1 rounded-full border',
+      {
+        'text-gray-600 bg-gray-50 border-gray-200': !isDark,
+        'dark:text-slate-300 dark:bg-slate-800 dark:border-slate-600': !isDark,
+        'text-slate-300 bg-slate-800 border-slate-600': isDark,
+      }
+    ]}>
+      {researchArea}
+    </p>
+  )}
+  
+  <p class:list={[
+    'text-sm leading-relaxed mb-6 flex-grow',
+    {
+      'text-gray-600': !isDark,
+      'dark:text-slate-300': !isDark,
+      'text-slate-300': isDark,
+    }
+  ]}>
+    {bio}
+  </p>
+  
+  {github && (
+    <div class="flex justify-center mt-auto mb-4">
+      <a
+        href={github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={[
+          'inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 border',
+          {
+            'bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200 hover:text-gray-900': !isDark,
+            'dark:bg-slate-700 dark:text-slate-200 dark:border-slate-600 dark:hover:bg-slate-600 dark:hover:text-white': !isDark,
+            'bg-slate-700 text-slate-200 border-slate-600 hover:bg-slate-600 hover:text-white': isDark,
+          }
+        ]}
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-sm font-medium">GitHub</span>
+      </a>
+    </div>
+  )}
+</div>
