@@ -11,8 +11,8 @@
  */
 
 import Layout from '~/layouts/Layout.astro';
-import ResearchAreaCard from '~/components/lab/ResearchAreaCard.astro';
-import MemberCard from '~/components/lab/MemberCard.astro';
+import ResearchAreaCard from '~/components/ui/ResearchAreaCard.astro';
+import MemberCard from '~/components/ui/MemberCard.astro';
 
 // Load all data sources at build time
 const labData = await import('../data/lab.json').catch(() => ({

@@ -1,6 +1,5 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 
 // Research archive profile links
 const archiveProfiles = [
@@ -44,6 +43,7 @@ const metadata = {
       <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
         研究業績一覧
       </h2>
+    </div>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {archiveProfiles.map((profile) => (
