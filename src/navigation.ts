@@ -20,6 +20,10 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
     {
+      text: '研究業績',
+      href: getPermalink('/achieves'),
+    },
+    {
       text: 'Blog',
       links: [
         {

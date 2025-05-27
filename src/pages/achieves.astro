@@ -1,0 +1,106 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+// Research archive profile links
+const archiveProfiles = [
+  {
+    name: "DBLP",
+    url: "https://dblp.org/pid/99/3812.html",
+    favicon: "https://dblp.org/img/dblp.icon.192x192.png",
+    fallbackText: "DB"
+  },
+  {
+    name: "Google Scholar",
+    url: "https://scholar.google.com/scholar?as_sdt=0%2C5&q=ryosuke+saga",
+    favicon: "https://scholar.google.com/favicon.ico",
+    fallbackText: "GS"
+  },
+  {
+    name: "Researchmap",
+    url: "https://researchmap.jp/rsaga/published_papers",
+    favicon: "https://researchmap.jp/favicon.ico",
+    fallbackText: "RM"
+  },
+    {
+    name: "OMU",
+    url: "https://www.omu.ac.jp/",
+    favicon: "https://kyoiku-kenkyudb.omu.ac.jp/favicon.ico",
+    fallbackText: "OMU"
+  }
+];
+
+const metadata = {
+  title: "Research Archives",
+  description: "Links to my academic profiles and publication databases",
+  canonical: '/achives',
+};
+---
+
+<PageLayout metadata={metadata}>
+
+  <section class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+    <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-3xl">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+        研究業績一覧
+      </h2>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {archiveProfiles.map((profile) => (
+        <article class="group relative h-full overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-400">
+          <a 
+            href={profile.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit my ${profile.name} profile (opens in new tab)`}
+            class="block h-full p-6 text-inherit no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            <!-- Logo/Favicon with fallback -->
+            <div class="mb-6 flex h-12 items-center justify-center">
+              <img 
+                src={profile.favicon} 
+                alt={`${profile.name} logo`}
+                class="logo h-12 w-12 rounded-lg object-contain"
+              />
+              <div class="logo-fallback hidden h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-xl font-bold text-white">
+                {profile.fallbackText}
+              </div>
+            </div>
+
+            <!-- Card content -->
+            <div class="text-center">
+              <h3 class="mb-2 text-xl font-semibold text-default lg:text-2xl">
+                {profile.name}
+              </h3>
+            </div>
+
+            <div class="absolute right-4 top-4 opacity-60 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600 dark:text-blue-400">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15,3 21,3 21,9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</PageLayout>
+
+<script>
+  // Handle image fallback on load error
+  document.addEventListener('DOMContentLoaded', () => {
+    const logos = document.querySelectorAll('.logo') as NodeListOf<HTMLImageElement>;
+    logos.forEach(logo => {
+      logo.addEventListener('error', () => {
+        logo.classList.add('hidden');
+        const fallback = logo.nextElementSibling as HTMLElement;
+        if (fallback && fallback.classList.contains('logo-fallback')) {
+          fallback.classList.remove('hidden');
+          fallback.classList.add('flex');
+        }
+      });
+    });
+  });
+</script>
