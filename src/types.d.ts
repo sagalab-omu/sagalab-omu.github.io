@@ -290,5 +290,5 @@ export interface Member {
   bio: string;
   photo?: string;
   github?: string;
-  'research-area'?: string;
+  'research-area'?: string[];
 }

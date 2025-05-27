@@ -26,7 +26,7 @@ interface Member {
   bio: string;
   photo: string;
   github: string;
-  "research-area": string;
+  "research-area": string[];
 }
 
 const members: Member[] = Object.values(memberFiles).map((file: { default: Member }) => file.default);
@@ -58,7 +58,7 @@ const metadata = {
   
   <MembersWidget
     title="チームメンバー"
-    subtitle="私たちの研究室は、様々な専門分野を持つメンバーで構成されています。"
+    subtitle="私たちの研究室は、国際的なメンバーで構成されています。"
     members={members}
   >
     <Fragment slot="bg">

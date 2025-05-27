@@ -4,5 +4,5 @@
   "bio": "",
   "photo": "/images/members/naoki.jpg",
   "github": "https://github.com/mchen",
-  "research-area": "#可視化"
+  "research-area": ["可視化", "機械学習", "コンピュータグラフィックス"]
 }
