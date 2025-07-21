@@ -2,7 +2,7 @@
   "name": "橋本 直樹",
   "role": "Master's Student(2nd Year)",
   "bio": "大阪公立大学情報学研究科学際情報専攻の修士2年生です。主に、進化計算とGPGPUを用いた可視化の研究を行っています。趣味では、ボランティア活動などを行っています。ネイティブアプリの開発を中心に行ってきましたが、最近はWebアプリケーションの開発にも興味を持っています。",
-  "photo": "~/images/members/naoki.jpg",
+  "photo": "/images/members/naoki.jpg",
   "github": "https://github.com/mchen",
   "research-area": ["可視化", "機械学習", "コンピュータグラフィックス"]
 }
