@@ -23,6 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+  site: 'https://badsparky.github.io',
+  base: '/sagalab-omu.github.io',
 
   integrations: [
     tailwind({
