@@ -1,0 +1,60 @@
+---
+import ResearchAreaCard from '../ui/ResearchAreaCard.astro';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  containerClass?: string;
+  gridClass?: string;
+}
+
+interface ResearchArea {
+  name: string;
+  description: string;
+  icon?: string;
+  active?: boolean;
+}
+
+const { 
+  id = "research-areas",
+  title = "研究分野", 
+  subtitle = "私たちの多様な研究は、複数の分野と技術にまたがっています。",
+  containerClass = "py-16 md:py-24 bg-gray-50 dark:bg-gray-800",
+  gridClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+} = Astro.props;
+
+// Load all research area data files at build time
+const researchAreaFiles = import.meta.glob('../../data/researchAreas/*.json', { eager: true });
+
+const researchAreas = Object.values(researchAreaFiles)
+  .map((file: { default: ResearchArea }) => file.default)
+  .filter((area: ResearchArea) => area.active !== false); // Only show active research areas
+---
+
+{researchAreas.length > 0 && (
+  <section id={id} class={containerClass}>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8">
+          {title}
+        </h2>
+        {subtitle && (
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            {subtitle}
+          </p>
+        )}
+      </div>
+      
+      <div class={gridClass}>
+        {researchAreas.map((area) => (
+          <ResearchAreaCard
+            name={area.name}
+            description={area.description}
+            icon={area.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+)}
