@@ -1,0 +1,6 @@
+{
+  "name": "深層学習",
+  "description": "可視化、最適化、経路計画問題への深層学習と強化学習技術の応用",
+  "icon": "/icons/deep-learning.svg",
+  "active": true
+}

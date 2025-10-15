@@ -1,0 +1,6 @@
+{
+  "name": "推薦システム",
+  "description": "スパースデータ問題を解決するための確率的行列分解を用いた協調フィルタリングとコンテンツベースの推薦システム",
+  "icon": "/icons/recommender.svg",
+  "active": true
+}

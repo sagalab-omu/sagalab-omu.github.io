@@ -1,0 +1,30 @@
+---
+// Example usage of the ResearchAreas component
+import Layout from '~/layouts/PageLayout.astro';
+import ResearchAreas from '~/components/widgets/ResearchAreas.astro';
+
+const metadata = {
+  title: 'Research Areas Example',
+  description: 'Example page showing how to use the ResearchAreas component',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Basic usage with default settings -->
+  <ResearchAreas />
+
+  <!-- Customized usage with different title and styling -->
+  <ResearchAreas 
+    title="Our Research Focus" 
+    subtitle="Exploring cutting-edge technologies and methodologies across multiple domains"
+    containerClass="py-20 bg-white dark:bg-gray-900"
+    gridClass="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+  />
+
+  <!-- Minimal usage without subtitle -->
+  <ResearchAreas 
+    title="Key Research Areas" 
+    subtitle=""
+    containerClass="py-12 bg-gray-100 dark:bg-gray-800"
+  />
+</Layout>

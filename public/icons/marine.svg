@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Boat/ship -->
+  <path d="M 4,12 L 6,8 L 18,8 L 20,12 Z"/>
+  <path d="M 12,4 L 12,8"/>
+  <path d="M 12,4 L 16,6"/>
+  <!-- Waves -->
+  <path d="M 2,14 Q 4,13 6,14 T 10,14 T 14,14 T 18,14 T 22,14" stroke-width="1.5"/>
+  <path d="M 2,17 Q 4,16 6,17 T 10,17 T 14,17 T 18,17 T 22,17" stroke-width="1.5"/>
+  <path d="M 2,20 Q 4,19 6,20 T 10,20 T 14,20 T 18,20 T 22,20" stroke-width="1.5"/>
+</svg>

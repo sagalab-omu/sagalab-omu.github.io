@@ -1,0 +1,6 @@
+{
+  "name": "エッジバンドリング",
+  "description": "多型グラフにおけるエッジバンドリング技術の定量的評価手法（純度メトリクスと構造的美学を含む）",
+  "icon": "/icons/edge-bundling.svg",
+  "active": true
+}

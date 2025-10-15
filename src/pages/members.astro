@@ -1,7 +1,6 @@
 ---
 
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import MembersWidget from '~/components/widgets/Members.astro';
 
 // Load all data sources at build time
@@ -41,21 +40,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <Hero
-    actions={[
-
-    ]}
-    image={{ src: '~/assets/images/lab-member.png', alt: 'sagalab hero image' }}
-  >
-    <Fragment slot="title">
-      佐賀研究室は挑戦し続けます
-    </Fragment>
-
-    <Fragment slot="subtitle">
-
-    </Fragment>
-  </Hero>
-  
   <MembersWidget
     title="チームメンバー"
     subtitle="私たちの研究室は、国際的なメンバーで構成されています。"

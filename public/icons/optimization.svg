@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Graph showing optimization curve -->
+  <path d="M 3,20 L 3,4 M 3,20 L 21,20" stroke-width="2"/>
+  <!-- Optimization curve with minimum -->
+  <path d="M 4,18 Q 8,10 12,8 T 20,12" stroke-width="2" fill="none"/>
+  <!-- Marker at optimal point -->
+  <circle cx="12" cy="8" r="2" fill="#2563eb"/>
+  <!-- Arrow pointing down to minimum -->
+  <path d="M 12,3 L 12,6" stroke-width="1.5"/>
+  <polygon points="12,6 11,5 13,5" fill="#2563eb" stroke="none"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hand gesture -->
+  <path d="M 8,16 L 8,10 M 8,10 L 10,8 M 10,8 L 10,12"/>
+  <path d="M 10,12 L 12,10 M 12,10 L 12,14"/>
+  <path d="M 12,14 L 14,12 M 14,12 L 14,16"/>
+  <!-- VR headset representation -->
+  <rect x="4" y="4" width="16" height="6" rx="2"/>
+  <circle cx="8" cy="7" r="1.5"/>
+  <circle cx="16" cy="7" r="1.5"/>
+  <!-- Touch/interaction point -->
+  <circle cx="18" cy="18" r="2"/>
+  <circle cx="18" cy="18" r="3" opacity="0.3"/>
+</svg>
