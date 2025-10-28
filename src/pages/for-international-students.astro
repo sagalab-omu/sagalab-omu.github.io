@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'For International Students',
+};
+const items = [
+  {
+    title: '留学生が満たすべき条件',
+    description: '日本語が～めええええええええええええええええええええっちゃうまい<br>hogehoge'
+  },
+  {
+    title: '受け入れまでのプロセス',
+    description: 'ほげほげ<br>ほげほげ'
+  },
+  {
+    title: 'Requirements',
+    description: 'hoge'
+  },
+  {
+    title: 'Process',
+    description: 'hogehoge'
+  }
+]
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <section class="px-2 sm:px-2 mx-auto max-w-6xl">
+    <HeroText tagline="For International Students" title="留学生向け要綱" subtitle='留学生向けの情報を提供します。'/>
+    <Features
+      title='佐賀研究室は留学生の受け入れを行っています。'
+      subtitle='留学生が満たすべき条件・受け入れまでのプロセスをまとめています。<br><br>※English version will follow'
+      columns={2}
+      items={items}
+      classes={{container: ''}}>
+      </Features>
+  </section>
+</Layout>

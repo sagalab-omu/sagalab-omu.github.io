@@ -10,24 +10,25 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
+  <section class="px-2 sm:px-2 mx-auto max-w-6xl">
+    <HeroText tagline="Contact" title="お問い合わせ先" />
 
-  <HeroText tagline="Contact" title="お問い合わせ先" />
+    <!-- Features2 Widget ************** -->
 
-  <!-- Features2 Widget ************** -->
+    <Features2
+      items={[
 
-  <Features2
-    items={[
-
-      {
-        title: 'Eメール',
-        description: 'r21155g@omu.ac.jp',
-        icon: 'tabler:mail',
-      },
-      {
-        title: '場所',
-        description: '〒599-8531 大阪府堺市中区学園町1番1号',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+        {
+          title: 'Eメール',
+          description: 'r.saga@omu.ac.jp',
+          icon: 'tabler:mail',
+        },
+        {
+          title: '場所',
+          description: '〒599-8531 大阪府堺市中区学園町1番1号',
+          icon: 'tabler:map-pin',
+        },
+      ]}
+    />
+  </section>
 </Layout>

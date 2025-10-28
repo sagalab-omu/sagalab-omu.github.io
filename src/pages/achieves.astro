@@ -1,5 +1,6 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 
 // Research archive profile links
 const archiveProfiles = [
@@ -31,19 +32,15 @@ const archiveProfiles = [
 
 const metadata = {
   title: "Research Archives",
-  description: "Links to my academic profiles and publication databases",
-  canonical: '/achives',
+  description: "Links to our academic profiles and publication databases",
+  canonical: '/achieves',
 };
 ---
 
 <PageLayout metadata={metadata}>
 
-  <section class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-    <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-3xl">
-      <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-        研究業績一覧
-      </h2>
-    </div>
+  <section class="pb-12 md:pb-16 lg:pb-20 px-6 sm:px-6 mx-auto max-w-6xl">
+    <HeroText tagline="Achieves" title="研究業績" />
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {archiveProfiles.map((profile) => (

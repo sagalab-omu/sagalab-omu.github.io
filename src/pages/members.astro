@@ -1,6 +1,7 @@
 ---
 
 import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import MembersWidget from '~/components/widgets/Members.astro';
 
 // Load all data sources at build time
@@ -40,14 +41,14 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <MembersWidget
-    title="チームメンバー"
-    subtitle="私たちの研究室は、国際的なメンバーで構成されています。"
-    members={members}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gray-50 dark:bg-gray-950"></div>
-    </Fragment>
-  </MembersWidget>
-  
+  <section class="mx-auto max-w-6xl">
+    <HeroText tagline="team member" title="チームメンバー" subtitle="私たちの研究室は、国際的なメンバーで構成されています。"/>
+    <MembersWidget
+      members={members}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-gray-50 dark:bg-gray-950"></div>
+      </Fragment>
+    </MembersWidget>
+  </section>
 </Layout>

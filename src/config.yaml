@@ -1,5 +1,5 @@
 site:
-  name: SagaLab(deving)
+  name: SagaLab
   site: 'https://sagalab-omu.github.io'
   base: '/'
   trailingSlash: false
