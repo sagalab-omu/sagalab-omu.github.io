@@ -2,7 +2,7 @@
     "name": "植村 雄宙",
     "role": "Master's Student (1st Year)",
     "bio": "大阪公立大学情報学研究科学際情報専攻の修士1年生です。主にCTSEMを用いたSNS分析を行っています。趣味はゲーム配信を観たりしています。",
-    "photo": "ora.jpg",
+    "photo": "~/assets/images/members/ora.jpg",
     "research-area": ["SNS分析", "因果分析"],
     "github": ""
   }
