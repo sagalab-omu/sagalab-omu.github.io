@@ -2,7 +2,7 @@
     "name": "馬 兆其",
     "role": "Master's Student (2nd Year)",
     "bio": "学際情報学専攻の修士2年生です。主に位置情報に基づいた推薦システムの研究を行っています。趣味は、バドミントン練習、バドミントン大会への出場、または料理のことです。よろしくお願いします！",
-    "photo": "",
+    "photo": "~/assets/images/members/ma.jpg",
     "research-area": ["深層学習", "推薦システム", "POI推薦"],
     "github": ""
   }
