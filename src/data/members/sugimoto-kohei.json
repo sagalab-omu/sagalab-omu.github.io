@@ -2,7 +2,7 @@
     "name": "杉本 幸平",
     "role": "Master's Student (1st Year)",
     "bio": "海中で撮影された魚群の映像を機械学習を用いて解析する研究を行っています！趣味は食べ歩きで、美味しいお店をめぐるのが好きです。",
-    "photo": "",
+    "photo": "~/assets/images/members/kohei.jpg",
     "research-area": ["機械学習"],
     "github": ""
   }
