@@ -1,6 +1,6 @@
 {
   "name": "因果分析",
   "description": "トピックベースアプローチと階層構造を用いたテキストデータからの構造方程式モデリングと因果推論",
-  "icon": "/icons/causality.svg",
+  "icon": "src/assets/icons/causality.svg",
   "active": true
 }

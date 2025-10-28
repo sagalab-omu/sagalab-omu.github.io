@@ -1,6 +1,6 @@
 {
   "name": "テキストマイニング",
   "description": "ベイジアンローズツリーを用いたトピックモデリング、感情分析、階層的トピック抽出などの高度なテキスト解析技術",
-  "icon": "/icons/text-mining.svg",
+  "icon": "src/assets/icons/text-mining.svg",
   "active": true
 }
