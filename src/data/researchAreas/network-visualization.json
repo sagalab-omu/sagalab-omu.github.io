@@ -1,6 +1,6 @@
 {
   "name": "ネットワーク可視化",
   "description": "エッジバンドリング、力学的レイアウト、ノード集約など、大規模ネットワークデータ解析のためのグラフ可視化技術の研究",
-  "icon": "src/assets/icons/network-viz.svg",
+  "icon": "~/assets/icons/network-viz.svg",
   "active": true
 }

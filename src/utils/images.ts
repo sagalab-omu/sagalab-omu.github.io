@@ -5,7 +5,8 @@ import type { OpenGraph } from '@astrolib/seo';
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
   try {
-    images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
+    // Include all assets under ~/assets so icons (e.g. ~/assets/icons/...) are also discoverable
+    images = import.meta.glob('~/assets/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     // continue regardless of error
@@ -35,8 +36,9 @@ export const findImage = async (
     return imagePath;
   }
 
-  // Relative paths or not "~/assets/"
-  if (!imagePath.startsWith('~/assets/images')) {
+  // Relative paths or not under "~/assets/"
+  // We only attempt to resolve paths that explicitly use the ~/assets prefix.
+  if (!imagePath.startsWith('~/assets/')) {
     return imagePath;
   }
 

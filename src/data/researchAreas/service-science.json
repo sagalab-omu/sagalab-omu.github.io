@@ -1,6 +1,6 @@
 {
   "name": "サービスサイエンス",
   "description": "テキストマイニングと構造方程式モデリングを用いたサービス品質と顧客満足度を理解するためのデータ駆動型サービス分析",
-  "icon": "src/assets/icons/service-science.svg",
+  "icon": "~/assets/icons/service-science.svg",
   "active": true
 }
