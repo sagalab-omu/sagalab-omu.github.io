@@ -3,9 +3,12 @@ import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+
+// フォームにユニークなIDを付与
+const formId = `form-${Math.random().toString(36).substring(2, 9)}`;
 ---
 
-<form>
+<form id={formId} novalidate>
   {
     inputs &&
       inputs.map(
@@ -24,6 +27,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 autocomplete={autocomplete}
                 placeholder={placeholder}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                required
               />
             </div>
           )
@@ -42,6 +46,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          required
         />
       </div>
     )
@@ -56,6 +61,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             name="disclaimer"
             type="checkbox"
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            required
           />
         </div>
         <div class="ml-3">
@@ -85,3 +91,33 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 </form>
+
+<script define:vars={{ formId }}>
+  const form = document.getElementById(formId);
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  if (submitButton) {
+    // ページ読み込み時にボタンを無効化
+    submitButton.disabled = true;
+
+    // フォームのバリデーション状態をチェックしてボタンの状態を更新する関数
+    const checkFormValidity = () => {
+      submitButton.disabled = !form.checkValidity();
+    };
+
+    // フォーム内のいずれかの入力フィールドで入力があるたびにチェック
+    form.addEventListener('input', checkFormValidity);
+
+    // フォーム送信時の処理
+    form.addEventListener('submit', (event) => {
+      // フォームが有効でない場合、送信をキャンセルし、ブラウザのバリデーションUIを表示
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        // 無効なフィールドにブラウザ標準のエラーメッセージを表示
+        form.reportValidity();
+      }
+    });
+  }
+</script>

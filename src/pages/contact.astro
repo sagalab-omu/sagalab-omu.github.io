@@ -2,27 +2,55 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import ContactWidget from '~/components/widgets/Contact.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'contact',
 };
+const input = [
+  {
+    type: 'text',
+    name: 'name',
+    label: 'お名前 (Name)',
+    autocomplete: 'name',
+    placeholder: '山田 太郎',
+  },
+  {
+    type: 'email',
+    name: 'email',
+    label: 'メールアドレス (Email)',
+    autocomplete: 'email',
+    placeholder: 'example@example.com',
+  },
+  {
+    type: 'text',
+    name: 'subject',
+    label: '件名 (Subject)',
+    autocomplete: 'off',
+    placeholder: 'お問い合わせの概要',
+  },
+];
+
+const textarea = 
+  {
+    label: 'ご用件 (Message)',
+    name: 'message',
+    rows: 5,
+    placeholder: 'ご用件をできるだけ具体的にご記入ください。',
+  };
+
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-  <section class="px-2 sm:px-2 mx-auto max-w-6xl">
+  <section class="px-2 sm:px-2 mx-auto max-w-xl">
     <HeroText tagline="Contact" title="お問い合わせ先" />
 
     <!-- Features2 Widget ************** -->
 
     <Features2
+    columns={1}
       items={[
-
-        {
-          title: 'Eメール',
-          description: '<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#46;&#115;&#97;&#103;&#97;&#64;&#111;&#109;&#117;&#46;&#97;&#99;&#46;&#106;&#112;">&#114;&#46;&#115;&#97;&#103;&#97;&#64;&#111;&#109;&#117;&#46;&#97;&#99;&#46;&#106;&#112;</a><br>クリックするとメールソフトが立ち上がります。',
-          icon: 'tabler:mail',
-        },
         {
           title: '場所',
           description: '〒599-8531 大阪府堺市中区学園町1番1号<br>(学内: C4棟3階)',
@@ -31,4 +59,11 @@ const metadata = {
       ]}
     />
   </section>
+  <ContactWidget
+    title='問い合わせフォーム'
+    subtitle='Contact Form'
+    inputs={input}
+    textarea={textarea}
+    >
+  </ContactWidget>
 </Layout>
