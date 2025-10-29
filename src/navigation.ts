@@ -1,3 +1,4 @@
+import { link } from 'node:fs';
 import { getPermalink, getBlogPermalink, getAsset, getHomePermalink } from './utils/permalinks';
 
 export const headerData = {
@@ -32,19 +33,25 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'メンバー紹介',
       links: [
         { text: 'Features', href: '#' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'ニュース',
       links: [
         { text: 'Developer API', href: '#' },
       ],
     },
     {
-      title: 'Support',
+      title: '留学生向け',
+      links: [
+        { text: 'Docs', href: '#' },
+      ],
+    },
+    {
+      title: '問い合わせ',
       links: [
         { text: 'Docs', href: '#' },
       ],
