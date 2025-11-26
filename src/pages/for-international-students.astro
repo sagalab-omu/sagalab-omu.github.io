@@ -73,10 +73,11 @@ const conditionEN = [
     <HeroText tagline="For International Students" title="留学生向け要綱" subtitle='留学生向けの情報を提供します。'/>
     <Features
       title='本研究室では、毎年国内外の修士・博士の学生及び、研究生を募集しています。'
-      subtitle='ただし、下記の条件を原則、守っていただくことになっております。<br><br>※English version will follow'
+      subtitle='ただし、下記の条件を原則、守っていただくことになっております。<br><br><a href="#en" class="underline">※English version will follow</a>'
       columns={1}
       items={conditionJP}
-      classes={{container: ''}}>
+      classes={{container: ''}}
+      id='jp'>
       </Features>
     <Features
       title="Our laboratory accepts master’s and doctoral students, as well as research students, from both Japan and abroad every year."
@@ -84,6 +85,7 @@ const conditionEN = [
       columns={1}
       items={conditionEN}
       classes={{ container: '' }}
+      id='en'
     />
   </section>
 </Layout>

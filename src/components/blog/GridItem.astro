@@ -6,6 +6,7 @@ import Image from '~/components/common/Image.astro';
 
 import { findImage } from '~/utils/images';
 import { getPermalink } from '~/utils/permalinks';
+import defaultImage from '~/assets/images/blog/default.png';
 
 export interface Props {
   post: Post;
@@ -20,14 +21,13 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 <article
   class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
 >
-  <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
+  <div class={image ? "relative md:h-64 bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-6" : "relative md:h-64 bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-2"}>
     {
-      image &&
         (link ? (
           <a href={link}>
             <Image
-              src={image}
-              class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+              src={image ? image : defaultImage }
+              class="hidden md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
               widths={[400, 900]}
               width={400}
               sizes="(max-width: 900px) 400px, 900px"
@@ -40,8 +40,8 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
           </a>
         ) : (
           <Image
-            src={image}
-            class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+            src={image ? image : defaultImage}
+            class="hidden md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
             widths={[400, 900]}
             width={400}
             sizes="(max-width: 900px) 400px, 900px"
