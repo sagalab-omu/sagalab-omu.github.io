@@ -2,28 +2,34 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features from '~/components/widgets/Features.astro';
+import { toEditorSettings } from 'typescript';
 
 const metadata = {
   title: 'For International Students',
 };
 const items = [
   {
-    title: '留学生が満たすべき条件',
-    description: '日本語が～めええええええええええええええええええええっちゃうまい<br>hogehoge'
+    title: '研究生の期間として1年以上、滞在すること',
+    description: '　計算機科学などを勉強している学生かつ、学術論文を書いたことがある学生ならばその限りではありませんが、外国からの研究生は基本的に卒業論文などが十分な品質に到達していないことがあります。 <br>　そのため、日本では卒業研究で課しているような研究を1年間かけて実施してもらい、まずは卒論生と同様に論文を書いてもらいます。 また、この期間にデータ構造とアルゴリズムを初め、人工知能や機械学習などの計算機科学に関する授業を受講してもらい、テストを受けていただくことを求めております。'
   },
   {
-    title: '受け入れまでのプロセス',
-    description: 'ほげほげ<br>ほげほげ'
+    title: '日本語能力試験N1取得 もしくはTOEIC 750点以上取得',
+    description: '　これに該当しない場合、修士を卒業後母国に戻る、もしくは博士課程に進学することを推奨します。<br>　研究の際の問題として言語の壁があります。特に原則、N1以上ないと、基本的に会話ができません。また、修士における無作為な就職活動のために研究活動がおろそかになる学生が多々います。これは学生が悪いわけではありません。<br>　ただ、海外から日本に来ているのに修士の際に研究をせずして就活をするとなると、研究の時間が無くなってしまいます。特にN1がない学生は、日本での就職活動はかなり不利です。そのため、この就職活動による時間消耗の弊害を除くため、修士で卒業する場合は帰国を促しております。'
   },
   {
-    title: 'Requirements',
-    description: 'hoge'
+    title: '修士の間は1年に1本の論文（国内・国際、論文の種類を問わず）を書くこと',
+    description: '　研究を少なくとも平均的に進めている場合、1年に一本は論文をまとめることができるという経験則になります。'
   },
   {
-    title: 'Process',
-    description: 'hogehoge'
+    title: '4月入学予定の大学院生もしくは研究生',
+    description: '　ただし、夏に行われた院試を合格した学生、国費留学生においては10月において引き受けております。条件としているのは、夏の大学院入試において定員が満たされる可能性があるためです。'
+  },
+  {
+    title: '学部生の時のGPAが2.8以上(4点満点の場合)',
+    description: 'ある一定の基礎学力を期待しています。'
   }
 ]
+
 ---
 
 <Layout metadata={metadata}>
@@ -31,9 +37,9 @@ const items = [
   <section class="px-2 sm:px-2 mx-auto max-w-6xl">
     <HeroText tagline="For International Students" title="留学生向け要綱" subtitle='留学生向けの情報を提供します。'/>
     <Features
-      title='佐賀研究室は留学生の受け入れを行っています。'
-      subtitle='留学生が満たすべき条件・受け入れまでのプロセスをまとめています。<br><br>※English version will follow'
-      columns={2}
+      title='本研究室では、毎年国内外の修士・博士の学生及び、研究生を募集しています。'
+      subtitle='ただし、下記の条件を原則、守っていただくことになっております。<br><br>※English version will follow'
+      columns={1}
       items={items}
       classes={{container: ''}}>
       </Features>
