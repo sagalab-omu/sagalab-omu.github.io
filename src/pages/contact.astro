@@ -2,68 +2,36 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import ContactWidget from '~/components/widgets/Contact.astro';
-
+// import ContactWidget from '~/components/widgets/Contact.astro';
+import emailImage from '~/assets/images/email.png';
 const metadata = {
   title: 'contact',
 };
-const input = [
-  {
-    type: 'text',
-    name: 'name',
-    label: 'お名前 (Name)',
-    autocomplete: 'name',
-    placeholder: '山田 太郎',
-  },
-  {
-    type: 'email',
-    name: 'email',
-    label: 'メールアドレス (Email)',
-    autocomplete: 'email',
-    placeholder: 'example@example.com',
-  },
-  {
-    type: 'text',
-    name: 'subject',
-    label: '件名 (Subject)',
-    autocomplete: 'off',
-    placeholder: 'お問い合わせの概要',
-  },
-];
-
-const textarea = 
-  {
-    label: 'ご用件 (Message)',
-    name: 'message',
-    rows: 5,
-    placeholder: 'ご用件をできるだけ具体的にご記入ください。',
-  };
 
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-  <section class="px-2 sm:px-2 mx-auto max-w-xl">
+  <section class="px-2 sm:px-2 mx-auto max-w-4xl">
     <HeroText tagline="Contact" title="お問い合わせ先" />
-
     <!-- Features2 Widget ************** -->
-
     <Features2
-    columns={1}
+    columns={2}
       items={[
         {
           title: '場所',
           description: '〒599-8531 大阪府堺市中区学園町1番1号<br>(学内: C4棟3階)',
           icon: 'tabler:map-pin',
+          id: 'place'
         },
+        {
+          title: 'Email',
+          description: `<img src="${emailImage.src}" class="h-5 w-auto">`,
+          icon: 'tabler:mail',
+          id: 'email'
+        }
       ]}
     />
   </section>
-  <ContactWidget
-    title='問い合わせフォーム'
-    subtitle='Contact Form'
-    inputs={input}
-    textarea={textarea}
-    >
-  </ContactWidget>
+
 </Layout>

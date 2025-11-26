@@ -2,12 +2,15 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features from '~/components/widgets/Features.astro';
-import { toEditorSettings } from 'typescript';
 
 const metadata = {
   title: 'For International Students',
 };
-const items = [
+const conditionJP = [
+  {
+    title: '大前提として、研究室のルールを守り、学生の本分である研究・学問に専念することが絶対条件です',
+    description: '',
+  },
   {
     title: '研究生の期間として1年以上、滞在すること',
     description: '　計算機科学などを勉強している学生かつ、学術論文を書いたことがある学生ならばその限りではありませんが、外国からの研究生は基本的に卒業論文などが十分な品質に到達していないことがあります。 <br>　そのため、日本では卒業研究で課しているような研究を1年間かけて実施してもらい、まずは卒論生と同様に論文を書いてもらいます。 また、この期間にデータ構造とアルゴリズムを初め、人工知能や機械学習などの計算機科学に関する授業を受講してもらい、テストを受けていただくことを求めております。'
@@ -29,6 +32,38 @@ const items = [
     description: 'ある一定の基礎学力を期待しています。'
   }
 ]
+const conditionEN = [
+  {
+    title:
+      'As a fundamental prerequisite, you must follow the laboratory rules and devote yourself to research and academic study as your primary duty as a student.',
+    description: '',
+  },
+  {
+    title: 'Stay as a research student for at least one year.',
+    description:
+      'For students who have studied computer science and have already written academic papers, this requirement may be relaxed. However, in many cases, international research students have not yet produced a graduation thesis or equivalent work of sufficient quality.<br>Therefore, we ask you to spend one year conducting research comparable to an undergraduate thesis project in Japan, and first write a thesis at the same level as Japanese undergraduate students. During this period, you are also expected to take courses in computer science, such as data structures and algorithms, artificial intelligence, and machine learning, and to sit for examinations in these subjects.',
+  },
+  {
+    title: 'Obtain JLPT N1 or a TOEIC score of 750 or higher.',
+    description:
+      'If you do not meet this requirement, we recommend that you either return to your home country after completing your master’s degree or proceed to a doctoral program.<br>One of the major issues in research is the language barrier. As a rule, without at least JLPT N1, it is very difficult to communicate effectively in Japanese. In addition, many master’s students become overly occupied with job-hunting, which often leads to their research activities being neglected. This is not necessarily the students’ fault.<br>However, if you come all the way to Japan and then spend your master’s period mainly on job-hunting instead of research, you will lose valuable time for research. In particular, students without N1 face a significant disadvantage in the Japanese job market. To avoid research time being consumed by job-hunting, we therefore encourage students who wish to graduate at the master’s level to consider returning to their home country.',
+  },
+  {
+    title: 'Write at least one paper per year during the master’s program (domestic or international, of any type).',
+    description:
+      'Our empirical rule is that, if you are making at least average progress in your research, you should be able to compile your results into at least one paper per year.',
+  },
+  {
+    title: 'Be a graduate student or research student scheduled to enroll in April.',
+    description:
+      'However, we may accept students in October if they have passed the graduate school entrance examination held in summer or if they are MEXT (government-sponsored) students. The reason for this condition is that the program capacity may be filled by students who pass the summer entrance examination.',
+  },
+  {
+    title: 'Have an undergraduate GPA of 2.8 or higher (on a 4.0 scale).',
+    description: 'We expect students to have a certain level of fundamental academic ability.',
+  },
+];
+
 
 ---
 
@@ -40,8 +75,15 @@ const items = [
       title='本研究室では、毎年国内外の修士・博士の学生及び、研究生を募集しています。'
       subtitle='ただし、下記の条件を原則、守っていただくことになっております。<br><br>※English version will follow'
       columns={1}
-      items={items}
+      items={conditionJP}
       classes={{container: ''}}>
       </Features>
+    <Features
+      title="Our laboratory accepts master’s and doctoral students, as well as research students, from both Japan and abroad every year."
+      subtitle="However, in principle, we ask all students to meet the following conditions."
+      columns={1}
+      items={conditionEN}
+      classes={{ container: '' }}
+    />
   </section>
 </Layout>

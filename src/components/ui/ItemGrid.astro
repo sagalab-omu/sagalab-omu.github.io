@@ -5,6 +5,7 @@ import Button from './Button.astro';
 import { Icon } from 'astro-icon/components';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+const isSingleColums = columns === 1;
 
 const {
   container: containerClass = '',
@@ -34,7 +35,7 @@ const {
     >
       {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
         <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-          <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
+          <div class={twMerge(isSingleColums ? 'flex flex-row w-full' :'flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">
               {(icon || defaultIcon) && (
                 <Icon

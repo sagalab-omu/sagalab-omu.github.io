@@ -35,25 +35,27 @@ export const footerData = {
     {
       title: 'メンバー紹介',
       links: [
-        { text: 'Features', href: '#' },
+        { text: '一覧', href: '/members' },
       ],
     },
     {
       title: 'ニュース',
       links: [
-        { text: 'Developer API', href: '#' },
+        { text: '一覧', href: '/blog' },
       ],
     },
     {
       title: '留学生向け',
       links: [
-        { text: 'Docs', href: '#' },
+        { text: '募集要項', href: '/for-international-students#jp' },
+        { text: 'Application Guidelines', href: '/for-international-students#en' },
       ],
     },
     {
       title: '問い合わせ',
       links: [
-        { text: 'Docs', href: '#' },
+        { text: '場所', href: '/contact#place' },
+        { text: 'Email', href:'/contact#email' },
       ],
     },
     {
@@ -66,10 +68,12 @@ export const footerData = {
       ],
     },
   ],
+  /*
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
+  */
   socialLinks: [
     /*{ ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
