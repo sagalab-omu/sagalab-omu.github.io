@@ -70,3 +70,6 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+plugins:
+  - jekyll-sitemap
