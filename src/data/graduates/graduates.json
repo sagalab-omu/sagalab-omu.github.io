@@ -1,14 +1,31 @@
 [
-  {
-    "year": 2025,
-    "name": "Alice Smith"
-  },
-  {
-    "year": 2024,
-    "name": "Bob Johnson"
-  },
-  {
-    "year": 2023,
-    "name": "Charlie Brown"
-  }
+  { "year": 2025, "name": "Harry Potter" },
+  { "year": 2025, "name": "Hermione Granger" },
+  { "year": 2025, "name": "Ron Weasley" },
+  { "year": 2025, "name": "Ginny Weasley" },
+
+  { "year": 2024, "name": "Neville Longbottom" },
+  { "year": 2024, "name": "Luna Lovegood" },
+  { "year": 2024, "name": "Draco Malfoy" },
+  { "year": 2024, "name": "Cho Chang" },
+
+  { "year": 2023, "name": "Albus Dumbledore" },
+  { "year": 2023, "name": "Minerva McGonagall" },
+  { "year": 2023, "name": "Severus Snape" },
+  { "year": 2023, "name": "Rubeus Hagrid" },
+
+  { "year": 2022, "name": "Sirius Black" },
+  { "year": 2022, "name": "Remus Lupin" },
+  { "year": 2022, "name": "James Potter" },
+  { "year": 2022, "name": "Lily Evans" },
+
+  { "year": 2021, "name": "Fred Weasley" },
+  { "year": 2021, "name": "George Weasley" },
+  { "year": 2021, "name": "Molly Weasley" },
+  { "year": 2021, "name": "Arthur Weasley" },
+
+  { "year": 2020, "name": "Nymphadora Tonks" },
+  { "year": 2020, "name": "Bellatrix Lestrange" },
+  { "year": 2020, "name": "Lucius Malfoy" },
+  { "year": 2020, "name": "Cedric Diggory" }
 ]
