@@ -6,7 +6,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import ResearchAreas from '~/components/widgets/ResearchAreas.astro';
 
 const metadata = {
-  title: 'SagaLab - 大阪公立大学 佐賀研究室',
+  title: 'DSL Lab - 大阪公立大学 データ&システム工学研究室',
   ignoreTitleTemplate: true,
 };
 ---
@@ -14,19 +14,19 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <section class="mx-auto max-w-4xl">
-    <Hero tagline='SagaLab'
+    <Hero tagline='Data & System Engineering Lab'
     actions={[
       { text: 'Learn more', href: '#research-areas' },
       ]}
-      image={{ src: '~/assets/images/banner-design.svg', alt: 'SagaLab image' }}
+      image={{ src: '~/assets/images/banner-design.svg', alt: 'DSL Lab image' }}
       >
       <Fragment slot="title">
-        佐賀研究室
+        データ&システム工学研究室
       </Fragment>
 
       <Fragment slot="subtitle">
         <span class="hidden sm:inline">
-          私たちは大阪公立大学中百舌鳥キャンパスに所在する研究室です。<br>最適化や機械学習を用いた研究を行っています。
+          私たちは大阪公立大学 情報学研究科 学際情報学専攻 に所属する研究室です。<br>最適化や機械学習を用いた研究を行っています。
         </span>
       </Fragment>
     </Hero>
