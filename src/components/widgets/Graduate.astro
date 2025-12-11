@@ -1,0 +1,64 @@
+---
+import graduates from '~/data/graduates/graduates.json';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+// 年毎にまとめる
+const groupedByYear : Record<number, typeof graduates> = {};
+for (const g of graduates) {
+  if (!groupedByYear[g.year]) {
+    groupedByYear[g.year] = [];
+  }
+  groupedByYear[g.year].push(g);
+}
+
+// 年順にソートして配列に変換
+const years = Object.keys(groupedByYear)
+  .map((year) => parseInt(year))
+  .sort((a, b) => b - a);
+
+
+---
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-3xl mx-auto py-16 md:py-24 ${classes?.container ?? ''}`}
+  bg={bg}>
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    tagline={tagline}
+    classes={{
+      container: 'max-w-xl sm:mx-auto lg:max-w-2xl text-center mb-16',
+      title: `text-3xl md:text-4xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900 dark:text-white'}`,
+      subtitle: `max-w-3xl mx-auto text-xl ${isDark ? 'text-slate-400' : 'text-muted dark:text-slate-400'}`,
+    }}
+  />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {years.map((year) => (
+      <section class="p-4 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">
+          {year}年
+        </h3>
+        <ul class="list-disc ml-5 space-y-1">
+          {groupedByYear[year].map((m) => (
+            <li>{m.name}</li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+</WidgetWrapper>
