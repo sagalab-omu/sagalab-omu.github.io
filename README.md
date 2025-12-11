@@ -1,5 +1,5 @@
 # 概要
-SagaLabの研究室ページです。
+DSE Labの研究室ページです。
 AstroとTailwind cssを用いたフレームワークを採用しました。
 
 # 更新方法

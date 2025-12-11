@@ -83,7 +83,7 @@ export const footerData = {
   ],
   footNote: `
     <p class="text-sm text-gray-500">
-      © 2025 DSL Laboratory — Built with <a href="https://github.com/arthelokyo/astrowind" class="underline">AstroWind</a> (MIT License)
+      © 2025 DSE Laboratory — Built with <a href="https://github.com/arthelokyo/astrowind" class="underline">AstroWind</a> (MIT License)
     </p>
   `,
 };

@@ -1,5 +1,5 @@
 site:
-  name: DSL Lab
+  name: DSE Lab
   site: 'https://sagalab-omu.github.io'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: DSL Lab
-    template: '%s — DSL Lab'
+    default: DSE Lab
+    template: '%s — DSE Lab'
   description: "Lab in Osaka Metoropolitan University, Japan. We are working on the development of a new generation of AI agents that can learn and adapt to their environment in real-time, with a focus on safety and reliability."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: SagaLab
+    site_name: DSE Lab
     images:
       - url: '~/assets/images/banner-design.svg'
         width: 1200
