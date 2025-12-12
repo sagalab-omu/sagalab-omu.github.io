@@ -15,17 +15,21 @@ const {
 } = Astro.props;
 
 // 年毎にまとめる
-const groupedByYear : Record<number, typeof graduates> = {};
+const groupedByYear : Record<number, Record<string, typeof graduates>> = {};
 for (const g of graduates) {
   if (!groupedByYear[g.year]) {
-    groupedByYear[g.year] = [];
+    groupedByYear[g.year] = {};
   }
-  groupedByYear[g.year].push(g);
+  const degree = g.degree ?? 'Other';
+  if (!groupedByYear[g.year][degree]){
+    groupedByYear[g.year][degree] = [];
+  }
+  groupedByYear[g.year][degree].push(g);
 }
 
 // 年順にソートして配列に変換
 const years = Object.keys(groupedByYear)
-  .map((year) => parseInt(year))
+  .map(Number)
   .sort((a, b) => b - a);
 
 
@@ -46,17 +50,22 @@ const years = Object.keys(groupedByYear)
     }}
   />
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {years.map((year) => (
       <section class="p-4 border rounded-lg">
-        <h3 class="text-xl font-semibold mb-2">
+        <h3 class="text-secondary  dark:text-blue-200 text-xl font-semibold mb-2">
           {year}年
         </h3>
-        <ul class="ml-5 space-y-1">
-          {groupedByYear[year].map((m) => (
-            <li>{m.name}</li>
-          ))}
-        </ul>
+        {Object.entries(groupedByYear[year]).map(([degree, members]) => (
+          <div class=" mb-4">
+            <h4 class="text-lg font-medium mb-1">{degree}</h4>
+            <ul class="text-muted mb-6 dark:text-slate-300 ml-5 list-disc marker:text-slate-300 space-y-1">
+              {members.map((m) => (
+                <li>{m.name}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
     ))}
   </div>

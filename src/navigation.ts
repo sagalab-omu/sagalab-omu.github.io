@@ -35,7 +35,8 @@ export const footerData = {
     {
       title: 'メンバー紹介',
       links: [
-        { text: '一覧', href: '/members' },
+        { text: 'メンバー', href: '/members#member' },
+        { text: '卒業生', href: '/members#graduates' },
       ],
     },
     {

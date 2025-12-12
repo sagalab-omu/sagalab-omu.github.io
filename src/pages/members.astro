@@ -42,7 +42,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="mx-auto max-w-6xl">
+  <section id="member" class="mx-auto max-w-6xl">
     <HeroText tagline="team member" title="チームメンバー" subtitle="私たちの研究室は、国際的なメンバーで構成されています。"/>
     <MembersWidget
       members={members}
@@ -51,6 +51,8 @@ const metadata = {
         <div class="absolute inset-0 bg-gray-50 dark:bg-gray-950"></div>
       </Fragment>
     </MembersWidget>
+  </section>
+  <section id="graduates" class="mx-auto max-w-6xl">
     <Graduate title="卒業生" subtitle="私たちの研究室を卒業したメンバー一覧です。" tagline="Graduates"/>
   </section>
 </Layout>
