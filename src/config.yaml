@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: DSE Lab
-    template: '%s — DSE Lab'
+    default: DSE Lab Data & System Engineering Laboratory | 佐賀研究室 Sagalab
+    template: '%s — DSE Lab | 大阪公立大学 OMU | Data & System Engineering Laboratory | 佐賀研究室 Sagalab'
   description: "Lab in Osaka Metoropolitan University, Japan. We are working on the development of a new generation of AI agents that can learn and adapt to their environment in real-time, with a focus on safety and reliability."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: DSE Lab
+    site_name: DSE Lab | 大阪公立大学 OMU | Data & System Engineering Laboratory | 佐賀研究室 Sagalab
     images:
       - url: '~/assets/images/banner-design.svg'
         width: 1200
@@ -67,5 +67,3 @@ analytics:
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-plugins:
-  - jekyll-sitemap

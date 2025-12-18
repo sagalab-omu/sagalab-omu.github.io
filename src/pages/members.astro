@@ -5,21 +5,8 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import MembersWidget from '~/components/widgets/Members.astro';
 import Graduate from '~/components/widgets/Graduate.astro';
 
-// Load all data sources at build time
-const labData = await import('../data/lab.json').catch(() => ({
-  default: {
-    name: 'Our Laboratory',
-    tagline: 'Advancing knowledge through innovative research',
-    description: 'We are dedicated to pushing the boundaries of scientific discovery through cutting-edge research and collaboration.',
-    banner: '/images/lab/banner.jpg',
-    email: 'info@example.com',
-    location: 'Osaka, Japan'
-  }
-}));
 
 const memberFiles = import.meta.glob('../data/members/*.json', { eager: true });
-
-const lab = labData.default;
 
 interface Member {
   name: string;
@@ -36,7 +23,6 @@ console.log('Members loaded:', members);
 
 const metadata = {
   title: 'Members',
-  description: lab.description,
   canonical: '/members',
 };
 ---
