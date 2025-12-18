@@ -54,7 +54,7 @@ const years = Object.keys(groupedByYear)
     {years.map((year) => (
       <section class="p-4 border rounded-lg">
         <h3 class="text-secondary  dark:text-blue-200 text-xl font-semibold mb-2">
-          {year}年
+          {year}年度
         </h3>
         {Object.entries(groupedByYear[year]).map(([degree, members]) => (
           <div class=" mb-4">
