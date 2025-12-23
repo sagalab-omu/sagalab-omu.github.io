@@ -21,19 +21,18 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 <article
   class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
 >
-  <div class={image ? "relative md:h-64 bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-6" : "relative md:h-64 bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-2"}>
+  <div class={image ? "relative md:h-64 flex items-center bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-6" : "relative md:h-64 bg-gray-200 dark:bg-slate-400 rounded shadow-lg mb-2"}>
     {
         (link ? (
           <a href={link}>
             <Image
               src={image ? image : defaultImage }
-              class="hidden md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
+              class="hidden object-contain md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
               widths={[400, 900]}
               width={400}
               sizes="(max-width: 900px) 400px, 900px"
               alt={post.title}
               aspectRatio="16:9"
-              layout="cover"
               loading="lazy"
               decoding="async"
             />
@@ -41,7 +40,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         ) : (
           <Image
             src={image ? image : defaultImage}
-            class="hidden md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
+            class="hidden object-contain md:block w-full md:h-full rounded shadow-lg bg-gray-200 dark:bg-slate-400"
             widths={[400, 900]}
             width={400}
             sizes="(max-width: 900px) 400px, 900px"
