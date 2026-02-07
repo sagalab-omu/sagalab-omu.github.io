@@ -7,7 +7,7 @@ category: news
 tags:
   - 推薦システム
   - 掲載論文
-image: "~/assets/images/blog/news-3.jpg"
+image: "~/assets/images/blog/news-0003.jpg"
 ---
 
 **IEEE Access 掲載論文**に関するプレスリリースが公開されました。
