@@ -1,8 +1,9 @@
 {
-    "name": "佐々木 智雅",
-    "role": "Undergraduate (3rd Year)",
-    "bio": "大阪公立大学現代システム学域知識情報学科3回生の佐々木智雅です。現在はデータの分析などをやっております。",
-    "photo": "~/assets/images/members/tomomasa.jpg",
-    "research-area": ["データ分析"],
-    "github": ""
-  }
+  "name": "佐々木 智雅",
+  "role": "Undergraduate (4th Year)",
+  "bio": "大阪公立大学現代システム学域知識情報学科4回生の佐々木智雅です。現在はデータの分析などをやっております。趣味はサッカー観戦やゲームです。",
+  "photo": "~/assets/images/members/tomomasa.jpg",
+  "research-area": ["データ分析"],
+  "github": ""
+}
+

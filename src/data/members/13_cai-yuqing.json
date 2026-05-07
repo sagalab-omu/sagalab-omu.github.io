@@ -1,8 +1,8 @@
 {
-    "name": "CAI YUQING",
-    "role": "Master's Student (1st Year)",
-    "bio": "大阪公立大学大学院 情報学研究科 学際情報学専攻の修士1年です。主な研究テーマは偽レビュー（fake review）検出です。趣味は写真旅行で、様々な美しい風景を見ることです。",
-    "photo": "~/assets/images/members/cai.jpg",
-    "research-area": ["偽レビュー検出"],
-    "github": ""
-  }
+  "name": "CAI YUQING",
+  "role": "Master's Student (2nd Year)",
+  "bio": "大阪公立大学大学院 情報学研究科 学際情報学専攻 修士2年生です。主な研究テーマは偽レビュー検出です。趣味はドライブ旅行と写真撮影で、自分の目で見た世界の美しい景色を写真に残すことです。",
+  "photo": "~/assets/images/members/cai.jpeg",
+  "research-area": ["偽レビュー検出", "機械学習"],
+  "github": ""
+}
