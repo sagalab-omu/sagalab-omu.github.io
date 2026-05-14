@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-05-14T00:00:00Z
+publishDate: 2026-03-11T00:00:00Z
 author: Chihiro Noda
 title: 本研究室の研究成果について VISAPP 2026 にて発表を行いました。
 excerpt: 本研究室の橋本さんの論文が VISAPP 2026 にて採択され、口頭発表を行いました。
