@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-09-30T00:00:00Z
-author: Chihiro Noda
+author: Ryosuke Saga
 title: 本研究室の学生が 2026年度 情報可視化合同合宿 にて優秀発表賞を受賞しました。
 excerpt: 本研究室の野田千尋さん・豊原琴葉さんが、2026年度 情報可視化合同合宿にて優秀発表賞（教員選出）を受賞しました。
 category: news
