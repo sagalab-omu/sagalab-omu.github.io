@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-11-13T00:00:00Z
+publishDate: 2026-11-10T00:00:00Z
 author: Ryosuke Saga
 title: 佐賀亮介 教授が参画する研究課題が Go-Tech 事業に採択されました。
 excerpt: 佐賀亮介 教授が参画する研究課題が、令和8年度 成長型中小企業等研究開発支援事業（Go-Tech事業）に採択されました。
