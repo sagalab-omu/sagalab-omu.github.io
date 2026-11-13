@@ -2,7 +2,7 @@
 publishDate: 2026-06-18T00:00:00Z
 author: Chihiro Noda
 title: 本研究室の研究成果について IEEE SMC 2026 に採択されました。
-excerpt: 本研究室の大澤一茶さん、修了生の玉田拓也さんの論文が IEEE SMC 2026 に採択されました。
+excerpt: 本研究室の大澤一茶さんら、修了生の玉田拓也さんらの論文が IEEE SMC 2026 に採択されました。
 category: news
 tags:
   - ウェアラブルセンサ
@@ -14,9 +14,9 @@ tags:
 image: "~/assets/images/blog/news-0009.jpg"
 ---
 
-## IEEE SMC 2026 に本研究室の論文が採択されました
+## IEEE SMC 2026 に本研究室の研究成果が採択されました
 
-本研究室の **大澤一茶さん**、および修了生の **玉田拓也さん** の論文が、IEEE Systems, Man, and Cybernetics Society が主催する国際会議 **IEEE International Conference on Systems, Man, and Cybernetics（IEEE SMC 2026）** に採択されました。
+本研究室の **大澤一茶さん** ら、および修了生の **玉田拓也さん** らの論文が、IEEE Systems, Man, and Cybernetics Society が主催する国際会議 **IEEE International Conference on Systems, Man, and Cybernetics（IEEE SMC 2026）** に採択されました。
 
 IEEE SMC 2026 は、2026年10月4〜7日に米国・ワシントン州ベルビューにて開催されます。発表は後日行われる予定です。
 

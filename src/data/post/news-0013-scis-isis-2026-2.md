@@ -2,7 +2,7 @@
 publishDate: 2026-11-12T00:00:00Z
 author: Ryosuke Saga
 title: 本研究室の研究成果について SCIS&ISIS 2026 にて発表を行い、Best Application Award を受賞しました。
-excerpt: 本研究室の野田千尋さんが SCIS&ISIS 2026 にて研究発表を行い、Best Application Award を受賞しました。
+excerpt: 本研究室の研究成果が SCIS&ISIS 2026 にて Best Application Award を受賞しました。
 category: news
 tags:
   - ネットワーク可視化
@@ -12,11 +12,11 @@ tags:
 image: "~/assets/images/blog/news-0013.jpg"
 ---
 
-## SCIS&ISIS 2026 にて本研究室学生が Best Application Award を受賞しました
+## SCIS&ISIS 2026 にて本研究室の研究成果が Best Application Award を受賞しました
 
-本研究室の **野田千尋さん** が、2026年11月2〜5日に東京都八王子市にて開催された **Joint 14th International Conference on Soft Computing and Intelligent Systems and 27th International Symposium on Advanced Intelligent Systems（SCIS&ISIS 2026）** に参加し、研究発表を行いました。
+2026年11月2〜5日に東京都八王子市にて開催された **Joint 14th International Conference on Soft Computing and Intelligent Systems and 27th International Symposium on Advanced Intelligent Systems（SCIS&ISIS 2026）** にて、本研究室の研究成果を発表しました。
 
-本発表は、以下の論文の内容を報告するものです。発表した論文は **Best Application Award** を受賞しました。
+本発表は、以下の論文の内容を報告するものです。本論文（著者：野田千尋、佐賀亮介）は **Best Application Award** を受賞しました。
 
 ---
 

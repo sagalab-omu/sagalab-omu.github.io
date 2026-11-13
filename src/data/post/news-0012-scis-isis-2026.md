@@ -2,7 +2,7 @@
 publishDate: 2026-09-10T00:00:00Z
 author: Ryosuke Saga
 title: 本研究室の研究成果について SCIS&ISIS 2026 に採択されました。
-excerpt: 本研究室の野田さんの論文が SCIS&ISIS 2026 に採択されました。
+excerpt: 本研究室の野田さんらの論文が SCIS&ISIS 2026 に採択されました。
 category: news
 tags:
   - ネットワーク可視化
@@ -11,9 +11,9 @@ tags:
 image: "~/assets/images/blog/news-0012.png"
 ---
 
-## SCIS&ISIS 2026 に本研究室学生の論文が採択されました
+## SCIS&ISIS 2026 に本研究室の研究成果が採択されました
 
-本研究室の **野田千尋さん** の論文が、日本知能情報ファジィ学会（SOFT）が主催する国際会議 **Joint 14th International Conference on Soft Computing and Intelligent Systems and 27th International Symposium on Advanced Intelligent Systems（SCIS&ISIS 2026）** に採択されました。
+本研究室の **野田千尋さん** らの論文が、日本知能情報ファジィ学会（SOFT）が主催する国際会議 **Joint 14th International Conference on Soft Computing and Intelligent Systems and 27th International Symposium on Advanced Intelligent Systems（SCIS&ISIS 2026）** に採択されました。
 
 SCIS&ISIS 2026 は、2026年11月2〜5日に東京都八王子市にて開催されます。発表は後日行われる予定です。
 

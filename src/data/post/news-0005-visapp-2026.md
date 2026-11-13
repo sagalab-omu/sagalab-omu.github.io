@@ -2,7 +2,7 @@
 publishDate: 2026-03-11T00:00:00Z
 author: Chihiro Noda
 title: 本研究室の研究成果について VISAPP 2026 にて発表を行いました。
-excerpt: 本研究室の橋本さんの論文が VISAPP 2026 にて採択され、口頭発表を行いました。
+excerpt: 本研究室の橋本さんらの論文が VISAPP 2026 にて採択され、口頭発表を行いました。
 category: news
 tags:
   - ネットワーク可視化
@@ -11,9 +11,9 @@ tags:
 image: "~/assets/images/blog/news-0005.png"
 ---
 
-## VISAPP 2026 にて本研究室学生の研究成果が発表されました
+## VISAPP 2026 にて本研究室の研究成果が発表されました
 
-2026年3月、スペイン・マルベラにて開催された **21st International Conference on Computer Vision Theory and Applications（VISAPP 2026）** において、本研究室の **橋本直樹さん** の研究成果が採択され、口頭発表が行われました。
+2026年3月、スペイン・マルベラにて開催された **21st International Conference on Computer Vision Theory and Applications（VISAPP 2026）** において、本研究室の **橋本直樹さん** らの研究成果が採択され、口頭発表が行われました。
 
 本国際会議の詳細は以下をご参照ください。  
 https://visapp.scitevents.org/

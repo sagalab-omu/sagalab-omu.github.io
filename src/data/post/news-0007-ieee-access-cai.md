@@ -2,7 +2,7 @@
 publishDate: 2026-05-21T00:00:00Z
 author: Chihiro Noda
 title: 本研究室の研究成果について IEEE Access に採択されました。
-excerpt: 本研究室の Cai Yuqing さんの論文が IEEE Access に採択されました。
+excerpt: 本研究室の Cai Yuqing さんらの論文が IEEE Access に採択されました。
 category: news
 tags:
   - 偽レビュー検出
@@ -11,9 +11,9 @@ tags:
 image: "~/assets/images/blog/news-0007.png"
 ---
 
-## IEEE Access に本研究室学生の論文が採択されました
+## IEEE Access に本研究室の研究成果が採択されました
 
-本研究室の **Cai Yuqing さん** の論文が、IEEE が発行するオープンアクセス国際論文誌 **IEEE Access** に採択されました。
+本研究室の **Cai Yuqing さん** らの論文が、IEEE が発行するオープンアクセス国際論文誌 **IEEE Access** に採択されました。
 
 ---
 

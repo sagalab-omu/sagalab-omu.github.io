@@ -2,7 +2,7 @@
 publishDate: 2025-12-18T00:00:00Z
 author: Ryosuke Saga
 title: 本研究室の研究成果についてプレスリリースが発表されました。
-excerpt: 本研究室の馬さんの論文が IEEE Access に掲載されました。
+excerpt: 本研究室の馬さんらの論文が IEEE Access に掲載されました。
 category: news
 tags:
   - 推薦システム
@@ -12,7 +12,7 @@ image: "~/assets/images/blog/news-0003.jpg"
 
 **IEEE Access 掲載論文**に関するプレスリリースが公開されました。
 
-本研究は、本研究室の **馬さん** による推薦システム分野の研究成果であり、国際論文誌 *IEEE Access* に掲載されました。
+本研究は、本研究室の **馬さん** らによる推薦システム分野の研究成果であり、国際論文誌 *IEEE Access* に掲載されました。
 
 
 
