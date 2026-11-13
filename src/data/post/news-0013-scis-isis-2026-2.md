@@ -8,7 +8,7 @@ tags:
   - ネットワーク可視化
   - 人工知能
   - 国際会議
-  - 受賞
+  - 受賞・選出
 image: "~/assets/images/blog/news-0013.jpg"
 ---
 
