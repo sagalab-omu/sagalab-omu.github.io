@@ -193,6 +193,16 @@ import { UI } from 'astrowind:config';
         el._intersectionThreshold = getThreshold(el);
       });
 
+      // An element taller than (viewport height / threshold) can never reach the ratio threshold
+      // (e.g. the members list when the browser is zoomed in), so it would stay hidden forever.
+      // Treat it as visible once it covers the same fraction of the viewport instead.
+      const isVisibleEnough = (entry, threshold) => {
+        if (entry.intersectionRatio >= threshold) return true;
+        if (!entry.isIntersecting) return false;
+        const rootHeight = entry.rootBounds ? entry.rootBounds.height : window.innerHeight;
+        return entry.intersectionRect.height >= rootHeight * threshold;
+      };
+
       const callback = (entries) => {
         entries.forEach((entry) => {
           requestAnimationFrame(() => {
@@ -212,7 +222,7 @@ import { UI } from 'astrowind:config';
               return;
             }
 
-            if (intersectionRatio >= threshold) {
+            if (isVisibleEnough(entry, threshold)) {
               if (!target.hasAttribute('data-animated')) {
                 target.removeAttribute('no-intersect');
                 target.setAttribute('data-animated', 'true');
@@ -239,7 +249,10 @@ import { UI } from 'astrowind:config';
         });
       };
 
-      this.observer = new IntersectionObserver(callback.bind(this), { threshold: [0, 0.25, 0.5, 0.99] });
+      // Fine-grained thresholds so the callback keeps firing while a tall element scrolls into view
+      // (with only [0, 0.25, 0.5, 0.99] it would fire once at 0 and never again).
+      const thresholds = Array.from({ length: 101 }, (_, i) => i / 100);
+      this.observer = new IntersectionObserver(callback.bind(this), { threshold: thresholds });
 
       elements.forEach((el) => {
         this.observer.observe(el);
