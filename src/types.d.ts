@@ -42,6 +42,9 @@ export interface Post {
 
   /**  */
   readingTime?: number;
+
+  /** Language of the post. */
+  lang?: 'ja' | 'en';
 }
 
 export interface Taxonomy {
