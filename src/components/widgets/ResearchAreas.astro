@@ -1,5 +1,9 @@
 ---
 import ResearchAreaCard from '../ui/ResearchAreaCard.astro';
+import { getLangFromUrl, useTranslations } from '~/i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export interface Props {
   id?: string;
@@ -14,12 +18,16 @@ interface ResearchArea {
   description: string;
   icon?: string;
   active?: boolean;
+  en?: {
+    name?: string;
+    description?: string;
+  };
 }
 
 const { 
   id = "research-areas",
-  title = "研究分野", 
-  subtitle = "私たちの多様な研究は、複数の分野と技術にまたがっています。",
+  title = t('research.title'),
+  subtitle = t('research.subtitle'),
   containerClass = "py-16 md:py-24 bg-gray-50 dark:bg-gray-800",
   gridClass = "grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8"
 } = Astro.props;
@@ -29,7 +37,8 @@ const researchAreaFiles = import.meta.glob('../../data/researchAreas/*.json', { 
 
 const researchAreas = Object.values(researchAreaFiles)
   .map((file: { default: ResearchArea }) => file.default)
-  .filter((area: ResearchArea) => area.active !== false); // Only show active research areas
+  .filter((area: ResearchArea) => area.active !== false) // Only show active research areas
+  .map((area: ResearchArea) => (lang === 'en' && area.en ? { ...area, ...area.en } : area));
 ---
 
 {researchAreas.length > 0 && (

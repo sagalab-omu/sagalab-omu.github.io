@@ -5,5 +5,10 @@
   "bio": "M1です。因果モデルについて研究しています。ラウドロック、デニムが大好きです。興味が湧けばなんでもやります。忙殺されてます。",
   "photo": "~/assets/images/members/issa.jpg",
   "research-area": ["機械学習", "因果モデル", "推薦システム", "Serendipity"],
-  "github": "https://github.com/one-T1133"
+  "github": "https://github.com/one-T1133",
+  "en": {
+    "name": "Issa Osawa",
+    "bio": "I'm a first-year master's student researching causal models. I love loud rock and denim, and I'll try anything that catches my interest. Swamped with work these days.",
+    "research-area": ["Machine Learning", "Causal Models", "Recommender Systems", "Serendipity"]
+  }
 }

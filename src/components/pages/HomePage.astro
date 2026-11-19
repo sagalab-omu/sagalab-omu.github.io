@@ -1,0 +1,64 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import ResearchAreas from '~/components/widgets/ResearchAreas.astro';
+import BlogOnHome from '~/components/widgets/BlogOnHome.astro';
+
+import { getLangFromUrl, localizePath, useTranslations } from '~/i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const metadata = {
+  title: t('home.metaTitle'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <section class="mx-auto max-w-4xl">
+    <Hero tagline='Data & System Engineering Lab'
+    actions={[
+      { text: t('home.learnMore'), href: '#research-areas' },
+      ]}
+      image={{ src: '~/assets/images/banner-design.svg', alt: 'DSE Lab image' }}
+      >
+      <Fragment slot="title">
+        {t('home.heroTitle')}
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        <span class="hidden sm:inline">
+          <Fragment set:html={t('home.heroSubtitle')} />
+        </span>
+      </Fragment>
+    </Hero>
+    <BlogOnHome title={t('home.latestNews')} />
+    <!-- ResearchAreas Widget (Filtered Version with Filter Display) -->
+    <ResearchAreas />
+
+
+    <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: t('home.ctaButton'),
+          href: localizePath('/contact', lang),
+          target: '_blank',
+          icon: '',
+        },
+      ]}
+    >
+      <Fragment slot="title">
+        <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">{t('home.ctaTitle')}</span>
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        <br class="hidden md:inline" />{t('home.ctaSubtitle')}
+      </Fragment>
+    </CallToAction>
+  </section>
+</Layout>

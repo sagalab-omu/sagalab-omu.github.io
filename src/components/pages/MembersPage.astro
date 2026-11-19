@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import MembersWidget from '~/components/widgets/Members.astro';
+import Graduate from '~/components/widgets/Graduate.astro';
+
+import { getLangFromUrl, localizePath, useTranslations } from '~/i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const memberFiles = import.meta.glob('../../data/members/*.json', { eager: true });
+
+interface Member {
+  name: string;
+  role: string;
+  bio: string;
+  photo: string;
+  github: string;
+  "research-area": string[];
+  en?: {
+    name?: string;
+    bio?: string;
+    "research-area"?: string[];
+  };
+}
+
+const members: Member[] = Object.values(memberFiles)
+  .map((file: { default: Member }) => file.default)
+  .map((member) => (lang === 'en' && member.en ? { ...member, ...member.en } : member));
+
+const metadata = {
+  title: 'Members',
+  canonical: localizePath('/members', lang),
+};
+---
+
+<Layout metadata={metadata}>
+  <section id="member" class="mx-auto max-w-6xl">
+    <HeroText tagline="team member" title={t('members.title')} subtitle={t('members.subtitle')}/>
+    <MembersWidget
+      members={members}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-gray-50 dark:bg-gray-950"></div>
+      </Fragment>
+    </MembersWidget>
+  </section>
+  <section id="graduates" class="mx-auto max-w-6xl">
+    <Graduate title={t('graduates.title')} subtitle={t('graduates.subtitle')} tagline="Graduates"/>
+  </section>
+</Layout>

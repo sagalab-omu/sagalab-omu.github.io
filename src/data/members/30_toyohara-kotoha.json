@@ -4,5 +4,10 @@
     "bio": "大阪公立大学現代システム科学域知識情報システム学類の4回生です。情報可視化の研究をしたいと考えています。プログラミングが好きなので、その意欲を生かして頑張りたいです。趣味は、ファッションや宝塚、本を読むことです。ラーメンも好きです。",
     "photo": "~/assets/images/members/kotoha.jpeg",
     "research-area": ["情報可視化"],
-    "github": ""
+    "github": "",
+    "en": {
+      "name": "Kotoha Toyohara",
+      "bio": "I'm a fourth-year undergraduate in the School of Knowledge and Information Systems, College of Sustainable System Sciences, Osaka Metropolitan University. I'd like to do research on information visualization. I love programming and want to put that enthusiasm to work. My hobbies are fashion, the Takarazuka Revue, and reading. I also love ramen.",
+      "research-area": ["Information Visualization"]
+    }
   }

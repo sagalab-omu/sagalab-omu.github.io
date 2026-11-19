@@ -2,5 +2,9 @@
   "name": "サービスサイエンス",
   "description": "テキストマイニングと構造方程式モデリングを用いたサービス品質と顧客満足度を理解するためのデータ駆動型サービス分析",
   "icon": "~/assets/icons/service-science.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Service Science",
+    "description": "Data-driven service analysis with text mining and structural equation modeling to understand service quality and customer satisfaction"
+  }
 }

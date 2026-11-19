@@ -2,5 +2,9 @@
   "name": "因果分析",
   "description": "トピックベースアプローチと階層構造を用いたテキストデータからの構造方程式モデリングと因果推論",
   "icon": "~/assets/icons/causality.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Causal Analysis",
+    "description": "Structural equation modeling and causal inference from text data using topic-based approaches and hierarchical structures"
+  }
 }

@@ -2,5 +2,9 @@
   "name": "テキストマイニング",
   "description": "ベイジアンローズツリーを用いたトピックモデリング、感情分析、階層的トピック抽出などの高度なテキスト解析技術",
   "icon": "~/assets/icons/text-mining.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Text Mining",
+    "description": "Advanced text analysis such as topic modeling with Bayesian rose trees, sentiment analysis, and hierarchical topic extraction"
+  }
 }

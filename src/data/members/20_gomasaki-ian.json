@@ -4,5 +4,10 @@
     "bio": "現在はエッジバンドリングに取り組んでいます。デカい音で音楽を聴くのが趣味です。タスクスケジュールを上手にするのが目標です！",
     "photo": "~/assets/images/members/ian.jpg",
     "research-area": ["可視化"],
-    "github": ""
-}
+    "github": "",
+    "en": {
+      "name": "Ian Gomasaki",
+      "bio": "I'm currently working on edge bundling. I love listening to music really loud. My goal is to get better at scheduling my tasks!",
+      "research-area": ["Visualization"]
+    }
+  }

@@ -4,5 +4,10 @@
   "bio": "情報学研究科修士二年の植村雄宙(うえむら おうら)です。趣味ではゲーム実況を観たり音楽ライブに行ったりしていて、最近はKing Gnuやスピッツをよく聞いています！",
   "photo": "~/assets/images/members/ora.jpg",
   "research-area": ["因果分析", "自然言語処理"],
-  "github": ""
+  "github": "",
+  "en": {
+    "name": "Oura Uemura",
+    "bio": "I'm Oura Uemura, a second-year master's student at the Graduate School of Informatics. In my free time I watch game streams and go to live concerts. Lately I've been listening to a lot of King Gnu and Spitz!",
+    "research-area": ["Causal Analysis", "Natural Language Processing"]
+  }
 }
