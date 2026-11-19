@@ -2,5 +2,9 @@
   "name": "タンジブルユーザインタフェース",
   "description": "直感的なデータインタラクションのためのタンジブルインタフェースとVR技術に焦点を当てたヒューマンコンピュータインタラクション研究",
   "icon": "~/assets/icons/tangible.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Tangible User Interfaces",
+    "description": "Human-computer interaction research on tangible interfaces and VR technologies for intuitive data interaction"
+  }
 }

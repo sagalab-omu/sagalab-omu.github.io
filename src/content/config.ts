@@ -46,9 +46,8 @@ const metadataDefinition = () =>
     })
     .optional();
 
-const postCollection = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
-  schema: z.object({
+const postSchema = () =>
+  z.object({
     publishDate: z.date().optional(),
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
@@ -62,9 +61,20 @@ const postCollection = defineCollection({
     author: z.string().optional(),
 
     metadata: metadataDefinition(),
-  }),
+  });
+
+const postCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
+  schema: postSchema(),
+});
+
+// English posts: same file names as the Japanese posts, under src/data/post/en
+const postEnCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post/en' }),
+  schema: postSchema(),
 });
 
 export const collections = {
   post: postCollection,
+  postEn: postEnCollection,
 };

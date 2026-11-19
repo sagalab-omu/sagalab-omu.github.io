@@ -4,5 +4,10 @@
     "bio": "",
     "photo": "~/assets/images/members/tang.jpg",
     "research-area": [""],
-    "github": ""
+    "github": "",
+    "en": {
+      "name": "Ryosuke Saga",
+      "bio": "",
+      "research-area": [""]
+    }
   }

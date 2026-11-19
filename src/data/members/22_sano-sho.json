@@ -4,5 +4,10 @@
   "bio": "修士一年の佐野翔です。因果推論を用いてデータを分析する研究を行っています。趣味は写真とコーヒーです。よろしくお願いします。",
   "photo": "~/assets/images/members/sho.jpeg",
   "research-area": ["データ分析", "因果推論", "計算社会科学", "自然言語処理"],
-  "github": ""
+  "github": "",
+  "en": {
+    "name": "Sho Sano",
+    "bio": "I'm Sho Sano, a first-year master's student. My research uses causal inference to analyze data. My hobbies are photography and coffee. Nice to meet you!",
+    "research-area": ["Data Analysis", "Causal Inference", "Computational Social Science", "Natural Language Processing"]
+  }
 }

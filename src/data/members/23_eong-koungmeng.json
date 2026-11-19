@@ -4,5 +4,10 @@
   "bio": "カンボジア出身のコウメイです。趣味は読書、ゲーム、サイクリングです。最近は日本語も頑張って勉強しています。よろしくお願いします！",
   "photo": "~/assets/images/members/koungmeng.jpeg",
   "research-area": ["機械学習"],
-  "github": ""
+  "github": "",
+  "en": {
+    "name": "EONG KOUNGMENG",
+    "bio": "I'm Koungmeng from Cambodia. My hobbies are reading, gaming, and cycling, and lately I've been working hard on my Japanese. Nice to meet you!",
+    "research-area": ["Machine Learning"]
+  }
 }

@@ -1,0 +1,43 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+// import ContactWidget from '~/components/widgets/Contact.astro';
+import emailImage from '~/assets/images/email.png';
+
+import { getLangFromUrl, useTranslations } from '~/i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const metadata = {
+  title: 'contact',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <section class="px-2 sm:px-2 mx-auto max-w-4xl">
+    <HeroText tagline="Contact" title={t('contact.title')} />
+    <!-- Features2 Widget ************** -->
+    <Features2
+    columns={2}
+      items={[
+        {
+          title: t('contact.place'),
+          description: t('contact.address'),
+          icon: 'tabler:map-pin',
+          id: 'place'
+        },
+        {
+          title: 'Email',
+          description: `<img src="${emailImage.src}" class="h-5 w-auto">`,
+          icon: 'tabler:mail',
+          id: 'email'
+        }
+      ]}
+    />
+  </section>
+
+</Layout>

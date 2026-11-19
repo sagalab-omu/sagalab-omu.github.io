@@ -5,6 +5,7 @@ import Grid from '~/components/blog/Grid.astro';
 
 import { getBlogPermalink } from '~/utils/permalinks';
 import { findPostsByIds } from '~/utils/blog';
+import { getLangFromUrl, localizePath, useTranslations } from '~/i18n/ui';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Widget } from '~/types';
 
@@ -16,10 +17,13 @@ export interface Props extends Widget {
   postIds: string[];
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const {
   title = await Astro.slots.render('title'),
-  linkText = 'View all posts',
-  linkUrl = getBlogPermalink(),
+  linkText = t('blog.viewAll'),
+  linkUrl = localizePath(getBlogPermalink(), lang),
   information = await Astro.slots.render('information'),
   postIds = [],
 
@@ -29,7 +33,7 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];
+const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds, lang) : [];
 ---
 
 {

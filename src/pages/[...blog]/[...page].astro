@@ -9,6 +9,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { getLangFromUrl, useTranslations } from '~/i18n/ui';
 
 export const prerender = true;
 
@@ -20,12 +21,13 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 // const allCategories = await findCategories();
 // const allTags = await findTags();
 
 const metadata = {
-  title: `News${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${t('blog.title')}${currentPage > 1 ? ` — ${t('blog.page')} ${currentPage}` : ''}`,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -38,7 +40,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 mx-auto max-w-4xl">
-    <HeroText tagline="News" title="ニュース" subtitle="佐賀研究室での研究や活動に関する最新情報をお届けします"/>
+    <HeroText tagline="News" title={t('blog.title')} subtitle={t('blog.subtitle')}/>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--

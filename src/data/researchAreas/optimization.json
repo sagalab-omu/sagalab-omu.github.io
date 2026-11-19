@@ -2,5 +2,9 @@
   "name": "最適化",
   "description": "経路計画と資源配分問題のための遺伝的アルゴリズムと進化計算を用いた多目的最適化",
   "icon": "~/assets/icons/optimization.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Optimization",
+    "description": "Multi-objective optimization with genetic algorithms and evolutionary computation for path planning and resource allocation problems"
+  }
 }

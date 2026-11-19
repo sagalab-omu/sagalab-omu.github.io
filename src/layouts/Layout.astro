@@ -1,7 +1,9 @@
 ---
 import '~/assets/styles/tailwind.css';
 
-import { I18N } from 'astrowind:config';
+import { I18N, SITE } from 'astrowind:config';
+import { getLangFromUrl, getPathForLang, isTagPath } from '~/i18n/ui';
+import { getCanonical } from '~/utils/permalinks';
 
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
@@ -22,7 +24,18 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
+const { textDirection } = I18N;
+const language = getLangFromUrl(Astro.url);
+
+// hreflang alternates (tag slugs differ between languages and 404 is a single bilingual page, so they have no counterpart)
+const showAlternates = SITE?.site && !isTagPath(Astro.url.pathname) && !/^\/404(\.html)?\/?$/.test(Astro.url.pathname);
+const alternates = showAlternates
+  ? [
+      { hreflang: 'ja', href: String(getCanonical(getPathForLang(Astro.url, 'ja'))) },
+      { hreflang: 'en', href: String(getCanonical(getPathForLang(Astro.url, 'en'))) },
+      { hreflang: 'x-default', href: String(getCanonical(getPathForLang(Astro.url, 'ja'))) },
+    ]
+  : [];
 ---
 
 <!doctype html>
@@ -33,6 +46,7 @@ const { language, textDirection } = I18N;
     <CustomStyles />
     <ApplyColorMode />
     <Metadata {...metadata} />
+    {alternates.map(({ hreflang, href }) => <link rel="alternate" hreflang={hreflang} href={href} />)}
     <SiteVerification />
     <Analytics />
 

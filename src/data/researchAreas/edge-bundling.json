@@ -2,5 +2,9 @@
   "name": "エッジバンドリング",
   "description": "多型グラフにおけるエッジバンドリング技術の定量的評価手法（純度メトリクスと構造的美学を含む）",
   "icon": "~/assets/icons/edge-bundling.svg",
-  "active": true
+  "active": true,
+  "en": {
+    "name": "Edge Bundling",
+    "description": "Quantitative evaluation of edge bundling techniques for multi-type graphs, including purity metrics and structural aesthetics"
+  }
 }

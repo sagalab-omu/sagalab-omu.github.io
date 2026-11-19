@@ -29,7 +29,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({ i18n: { defaultLocale: 'ja', locales: { ja: 'ja-JP', en: 'en-US' } } }),
     mdx(),
     icon({
       include: {

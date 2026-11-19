@@ -42,6 +42,9 @@ export interface Post {
 
   /**  */
   readingTime?: number;
+
+  /** Language of the post. */
+  lang?: 'ja' | 'en';
 }
 
 export interface Taxonomy {
@@ -133,6 +136,7 @@ export interface Stat {
 }
 
 export interface Item {
+  id?: string;
   title?: string;
   description?: string;
   icon?: string;

@@ -1,6 +1,7 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { blogCategoryRobots, getStaticPathsBlogCategory } from '~/utils/blog';
+import { getLangFromUrl, useTranslations } from '~/i18n/ui';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
@@ -18,9 +19,10 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths> & { category: Record
 const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${t('blog.categoryTitle', { title: category.title })} ${currentPage > 1 ? ` — ${t('blog.page')} ${currentPage}` : ''}`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

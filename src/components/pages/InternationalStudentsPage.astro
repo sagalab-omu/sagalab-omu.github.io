@@ -1,0 +1,40 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+
+import { conditionJP, conditionEN } from '~/data/internationalStudents';
+import { getLangFromUrl, useTranslations } from '~/i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const metadata = {
+  title: 'For International Students',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <section class="px-2 sm:px-2 mx-auto max-w-6xl">
+    <HeroText tagline="For International Students" title={t('intl.title')} subtitle={t('intl.subtitle')}/>
+    {lang === 'ja' && (
+    <Features
+      title='本研究室では、毎年国内外の修士・博士の学生及び、研究生を募集しています。'
+      subtitle='ただし、下記の条件を原則、守っていただくことになっております。<br><br><a href="#en" class="underline">※English version will follow</a>'
+      columns={1}
+      items={conditionJP}
+      classes={{container: ''}}
+      id='jp'>
+      </Features>
+    )}
+    <Features
+      title="Our laboratory accepts master’s and doctoral students, as well as research students, from both Japan and abroad every year."
+      subtitle="However, in principle, we ask all students to meet the following conditions."
+      columns={1}
+      items={conditionEN}
+      classes={{ container: '' }}
+      id='en'
+    />
+  </section>
+</Layout>

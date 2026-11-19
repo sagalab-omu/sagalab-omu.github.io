@@ -4,5 +4,10 @@
     "bio": "大阪公立大学大学院 情報学研究科 学際情報学専攻の研究生です。私は、AI生成コンテンツの普及によって、コンテンツプラットフォームにおける情報流通がどのように変化するのかに関心があります。主に、推薦システムのフィードバックループにおいて生じるAIGC由来のソースバイアスの緩和可能性について、HCIの観点から研究しています。趣味は様々なレトロなものに触れることです。大大阪時代の歴史的建物や街並みを歩いたり、大阪今昔館で近現代大阪の風景を写した写真を見たりするのが沼っています・また、DoomやDeus Ex、S.T.A.L.K.E.R.などに影響を受けたインディーゲームにも関心があります。",
     "photo": "~/assets/images/members/tanao.jpg",
     "research-area": ["推薦システム", "HCI", "AI生成コンテンツ", "情報検索"],
-    "github": "https://github.com/Pengyoushiyige"
+    "github": "https://github.com/Pengyoushiyige",
+    "en": {
+      "name": "Tan Ao",
+      "bio": "I'm a research student in the Department of Interdisciplinary Informatics, Graduate School of Informatics, Osaka Metropolitan University. I'm interested in how the spread of AI-generated content (AIGC) is changing the way information circulates on content platforms. My research looks, from an HCI perspective, at whether the source bias that AIGC introduces into recommender system feedback loops can be mitigated. Outside research, I love all things retro. I've become hooked on walking past the historic buildings and streetscapes of the Dai-Osaka era and looking at photographs of modern Osaka at the Osaka Museum of Housing and Living. I'm also into indie games inspired by Doom, Deus Ex, and S.T.A.L.K.E.R.",
+      "research-area": ["Recommender Systems", "HCI", "AI-Generated Content", "Information Retrieval"]
+    }
   }

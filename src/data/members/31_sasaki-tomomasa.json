@@ -4,6 +4,11 @@
   "bio": "大阪公立大学現代システム学域知識情報学科4回生の佐々木智雅です。現在はデータの分析などをやっております。趣味はサッカー観戦やゲームです。",
   "photo": "~/assets/images/members/tomomasa.jpg",
   "research-area": ["データ分析"],
-  "github": ""
+  "github": "",
+  "en": {
+    "name": "Tomomasa Sasaki",
+    "bio": "I'm Tomomasa Sasaki, a fourth-year undergraduate in the School of Knowledge and Information Systems, College of Sustainable System Sciences, Osaka Metropolitan University. I'm currently working on data analysis. My hobbies are watching soccer and playing video games.",
+    "research-area": ["Data Analysis"]
+  }
 }
 
